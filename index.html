@@ -11,14 +11,15 @@
 
     <div id="app">
         <div class="container">
-            <input v-model="newTodo" type="text" @keyup.enter="AddTodo">
+            <input v-model="newTodo" type="text" @keyup.enter="AddTodo" placeholder="Aggiungi qualcosa!">
             <button @click="AddTodo">AGGIUNGI</button>
+            <!-- <div v-show="newTodo.length < 4" class="danger">Deve contenere almeno 5 lettere!</div> -->
             <div class="list-container">
                 <ul>
                     <li v-if="todos.length == 0">Non hai niente da fare!</li>
-                    <li @click="Done"
-                    v-for="(todo,i) in todos"
-                    :class="[todos.done ? done : '', notdone]">
+                    <li v-for="(todo, i) in todos"
+                    @click="Done(i)"
+                    :class="{'done': todo.done}">
                     {{todo.text}} 
                     <button @click="RemoveToDo">X</button>
                     </li>

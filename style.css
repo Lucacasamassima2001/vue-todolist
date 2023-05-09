@@ -24,12 +24,14 @@ li{
 
 
 .notdone{
-    text-decoration: line-through;
+text-decoration: none;
+
 }
 
 .done{
-    text-decoration: none;
+    text-decoration: line-through;
 }
+
 
 
 

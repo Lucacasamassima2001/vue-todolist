@@ -34,7 +34,7 @@ const app = Vue.createApp({
             },
             {
                 text: "Comprare i Pomodori",
-                done: true,
+                done: false,
             },
             {
                 text: "Comprare le uova",
@@ -62,16 +62,21 @@ const app = Vue.createApp({
 
     methods: {
         AddTodo(){
-            this.todos.unshift({
-                // CREO GLI OGGETTI DENTRO IL NEWTODO
-                text: this.newTodo,
-                done: false,
-            })
-            this.newTodo= " ";
+            
+            if(this.newTodo.length >= 5){
+                this.todos.unshift({
+                    // CREO GLI OGGETTI DENTRO IL NEWTODO
+                    text: this.newTodo,
+                    done: false,
+                })
+                this.newTodo= " ";
+                
+            }
+
         },
 
-        Done(){
-            this.todos.done = !this.todos.done
+        Done(i){
+            this.todos[i].done = !this.todos[i].done;
         },
         RemoveToDo(i){
             this.todos.splice(i,1)
@@ -79,6 +84,7 @@ const app = Vue.createApp({
 
         
     },
+    
    });
    
    
