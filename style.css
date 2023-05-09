@@ -6,6 +6,35 @@
     font-size: 20px;
 }
 
+
+body{
+    background-color: rgb(24, 46, 76);
+}
+h1{
+    font-size: 2em;
+    margin-bottom: 2em;
+    color: white;
+}
+
+
+input{
+    padding: .5em;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+.add{
+    margin-left: 2em;
+    padding: .5em;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+
+.add:active{
+    color: green;
+    border: 2px solid green;
+}
+
 ul{
     list-style: none;
 }
@@ -13,6 +42,11 @@ ul{
 li{
     margin-top: 1em;
     cursor: pointer;
+    color: white;
+    margin-bottom: 1em;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -21,9 +55,6 @@ button{
 }
 .container{
     margin: auto;
-    margin-top: 200px;
-    width: 50%;
-    border: 2px solid black;
     padding: 2em;
 }
 
@@ -39,7 +70,26 @@ text-decoration: none;
 
 
 
+.danger{
+    color: red;
+    font-size: 24px;
+    margin-top: 1em;
+}
 
 
 
+.remove{
+    width: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 30px;
+    color: white;
+    background-color: rgb(24, 46, 76);
+    border: 2px solid white;
+    margin-bottom: 1em;
+}
 
+
+.remove:active{
+    color: red;
+    border: 2px solid red;
+}

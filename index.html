@@ -11,8 +11,9 @@
 
     <div id="app">
         <div class="container">
+            <h1>The To Do List :</h1>
             <input v-model="newTodo" type="text" @keyup.enter="AddTodo" placeholder="Aggiungi qualcosa!">
-            <button @click="AddTodo">AGGIUNGI</button>
+            <button @click="AddTodo" class="add">AGGIUNGI</button>
             <div v-show="inputError" class="danger">Deve contenere almeno 5 lettere!</div>
             <div class="list-container">
                 <ul>
@@ -21,7 +22,7 @@
                     @click="Done(i)"
                     :class="{'done': todo.done}">
                     {{todo.text}} 
-                    <button @click="RemoveToDo">X</button>
+                    <div><button @click="RemoveToDo" class="remove">X</button></div>
                     </li>
                 </ul>
             </div>
