@@ -12,8 +12,13 @@ ul{
 
 li{
     margin-top: 1em;
+    cursor: pointer;
 }
 
+
+button{
+    cursor: pointer;
+}
 .container{
     margin: auto;
     margin-top: 200px;
@@ -31,6 +36,7 @@ text-decoration: none;
 .done{
     text-decoration: line-through;
 }
+
 
 
 

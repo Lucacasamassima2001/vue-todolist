@@ -23,9 +23,8 @@
 const app = Vue.createApp({
     data(){ //or function() 
   
-        
        return {
-            
+            inputError: false,
             
            todos: [
             {
@@ -70,9 +69,11 @@ const app = Vue.createApp({
                     done: false,
                 })
                 this.newTodo= " ";
+                this.inputError = false
                 
+            }else{
+                this.inputError = true
             }
-
         },
 
         Done(i){
