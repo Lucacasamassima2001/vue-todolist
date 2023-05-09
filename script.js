@@ -22,20 +22,23 @@
 
 const app = Vue.createApp({
     data(){ //or function() 
+  
         
        return {
+            
+            
            todos: [
             {
                 text: "Comprare il latte",
-                done: true,
-            },
-            {
-                text: "Comprare i Pomodori",
                 done: false,
             },
             {
-                text: "Comprare le uova",
+                text: "Comprare i Pomodori",
                 done: true,
+            },
+            {
+                text: "Comprare le uova",
+                done: false,
             },
             {
                 text: "Esercitarmi sul codice",
@@ -47,11 +50,35 @@ const app = Vue.createApp({
             },
             {
                 text: "Comprare il latte",
-                done: true,
+                done: false,
             },
-           ]
+           ],
+
+           newTodo: "",
+           notdone: "notdone",
+           done: "done",
        }
-    }
+    },
+
+    methods: {
+        AddTodo(){
+            this.todos.unshift({
+                // CREO GLI OGGETTI DENTRO IL NEWTODO
+                text: this.newTodo,
+                done: false,
+            })
+            this.newTodo= " ";
+        },
+
+        Done(){
+            this.todos.done = !this.todos.done
+        },
+        RemoveToDo(i){
+            this.todos.splice(i,1)
+        }
+
+        
+    },
    });
    
    

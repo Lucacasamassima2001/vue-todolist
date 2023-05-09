@@ -11,9 +11,18 @@
 
     <div id="app">
         <div class="container">
-            <ul>
-                <li v-for="(todo,i) in todos">{{todo.text}} </li>
-            </ul>
+            <input v-model="newTodo" type="text" @keyup.enter="AddTodo">
+            <button @click="AddTodo">AGGIUNGI</button>
+            <div class="list-container">
+                <ul>
+                    <li @click="Done"
+                    v-for="(todo,i) in todos"
+                    :class="[todos.done ? done : '', notdone]">
+                    {{todo.text}} 
+                    <button @click="RemoveToDo">X</button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
