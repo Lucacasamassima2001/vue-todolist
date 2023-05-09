@@ -75,7 +75,7 @@ const app = Vue.createApp({
         },
         RemoveToDo(i){
             this.todos.splice(i,1)
-        }
+        },
 
         
     },
