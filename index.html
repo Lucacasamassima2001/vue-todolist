@@ -19,10 +19,9 @@
                 <ul>
                     <li v-if="todos.length == 0">Non hai niente da fare!</li>
                     <li v-for="(todo, i) in todos"
-                    @click="Done(i)"
                     :class="{'done': todo.done}">
-                    {{todo.text}} 
-                    <div><button @click="RemoveToDo" class="remove">X</button></div>
+                    <span @click="Done(i)">{{todo.text}}</span> 
+                    <button @click="RemoveToDo" class="remove">X</button>
                     </li>
                 </ul>
             </div>
