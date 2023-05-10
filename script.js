@@ -54,8 +54,8 @@ const app = Vue.createApp({
            ],
 
            newTodo: "",
-           notdone: "notdone",
-           done: "done",
+        //    notdone: "notdone",
+        //    done: "done",
        }
     },
 
@@ -68,7 +68,7 @@ const app = Vue.createApp({
                     text: this.newTodo,
                     done: false,
                 })
-                this.newTodo= " ";
+                this.newTodo.trim()= " ";
                 this.inputError = false
                 
             }else{
